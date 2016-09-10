@@ -1,4 +1,4 @@
-<h1>Zero Bot V1</h1>
+<h1>Zero Bot V1 (CLI)</h1>
 
 The Newest Cli And Api Bot Powered By Yagop And TeleSeed !
 
