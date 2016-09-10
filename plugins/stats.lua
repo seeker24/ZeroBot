@@ -23,7 +23,7 @@ local function chat_stats(receiver, chat_id)
     table.insert(users_info, user_info)
   end
   -- Sort users by msgs number
-  table.sort(users_info, function(a, b) 
+  table.sort(users_info, function(a, b)
     if a.msgs and b.msgs then
         return a.msgs > b.msgs
     end
@@ -35,7 +35,7 @@ local function chat_stats(receiver, chat_id)
   local file = io.open("./groups/lists/"..chat_id.."stats.txt", "w")
   file:write(text)
   file:flush()
-  file:close() 
+  file:close()
   send_document(receiver,"./groups/lists/"..chat_id.."stats.txt", ok_cb, false)
   return --text
 end
@@ -54,7 +54,7 @@ local function chat_stats2(chat_id)
   end
 
   -- Sort users by msgs number
-  table.sort(users_info, function(a, b) 
+  table.sort(users_info, function(a, b)
       if a.msgs and b.msgs then
         return a.msgs > b.msgs
       end
@@ -91,12 +91,12 @@ local function bot_stats()
   return text
 end
 local function run(msg, matches)
-  if matches[1]:lower() == 'teleseed' then -- Put everything you like :)
+  if matches[1]:lower() == 'zero' then -- Put everything you like :)
     local about = _config.about_text
     local name = user_print_name(msg.from)
-    savelog(msg.to.id, name.." ["..msg.from.id.."] used /teleseed ")
+    savelog(msg.to.id, name.." ["..msg.from.id.."] used /tele ")
     return about
-  end 
+  end
   if matches[1]:lower() == "statslist" then
     if not is_momod(msg) then
       return "For mods only !"
@@ -121,7 +121,7 @@ local function run(msg, matches)
         return
       end
     end
-    if matches[2] == "teleseed" then -- Put everything you like :)
+    if matches[2] == "zero" then -- Put everything you like :)
       if not is_admin1(msg) then
         return "For admins only !"
       else
@@ -143,9 +143,9 @@ return {
     "^[#!/]([Ss]tats)$",
     "^[#!/]([Ss]tatslist)$",
     "^[#!/]([Ss]tats) (group) (%d+)",
-    "^[#!/]([Ss]tats) (teleseed)",
-	"^[#!/]([Tt]eleseed)"
-    }, 
+    "^[#!/]([Ss]tats) (zero)",
+	"^[#!/]([Tt]157)"
+    },
   run = run
 }
 end

@@ -156,7 +156,7 @@ local function run(msg,matches)
 	local print_name = user_print_name(msg.from):gsub("‮", "")
 	local name_log = print_name:gsub("_", " ")
     if not is_admin1(msg) then
-    	return 
+    	return
     end
     if msg.media then
       	if msg.media.type == 'photo' and redis:get("bot:photo") then
@@ -185,7 +185,7 @@ local function run(msg,matches)
     	send_large_msg("user#id"..matches[2],text)
     	return "Message has been sent"
     end
-    
+
     if matches[1] == "pmblock" then
     	if is_admin2(matches[2]) then
     		return "You can't block admins"
@@ -258,11 +258,14 @@ end
       		print(k, v.." Globally banned")
     	end
     end
+local url , res = http.request('http://api.gpmod.ir/time/')
+local jdat = json:decode(url)
+local time = 'At 🕐 '..jdat.ENtime..' \non '..jdat.ENdate..''
 	if matches[1] == 'reload' then
 		receiver = get_receiver(msg)
 		reload_plugins(true)
-		post_msg(receiver, "Reloaded!", ok_cb, false)
-		return "Reloaded!"
+		post_msg(receiver, "", ok_cb, false)
+		return '⚙Reloaded all Data Successfully✅\n👤 Reloaded by : @'..msg.from.username..'\n\n➖➖➖➖➖➖➖➖➖\n'..time..''
 	end
 	--[[*For Debug*
 	if matches[1] == "vardumpmsg" and is_admin1(msg) then
@@ -273,7 +276,7 @@ end
 		local data = load_data(_config.moderation.data)
 		local long_id = data[tostring(msg.to.id)]['long_id']
 		if not long_id then
-			data[tostring(msg.to.id)]['long_id'] = msg.to.peer_id 
+			data[tostring(msg.to.id)]['long_id'] = msg.to.peer_id
 			save_data(_config.moderation.data, data)
 			return "Updated ID"
 		end
@@ -316,10 +319,10 @@ return {
 	"^[#!/](contactlist)$",
 	"^[#!/](dialoglist)$",
 	"^[#!/](delcontact) (%d+)$",
-	"^[#!/](addcontact) (.*) (.*) (.*)$", 
+	"^[#!/](addcontact) (.*) (.*) (.*)$",
 	"^[#!/](sendcontact) (.*) (.*) (.*)$",
 	"^[#!/](mycontact)$",
-	"^[#/!](reload)$",
+	"^[#/!]([Rr][Ee][Ll][Oo][Aa][Dd])$",
 	"^[#/!](updateid)$",
 	"^[#/!](sync_gbans)$",
 	"^[#/!](addlog)$",
@@ -329,6 +332,3 @@ return {
   run = run,
   pre_process = pre_process
 }
---By @imandaneshi :)
---https://github.com/SEEDTEAM/TeleSeed/blob/test/plugins/admin.lua
----Modified by @Rondoozle for supergroups

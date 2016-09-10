@@ -1007,7 +1007,7 @@ function run(msg, matches)
 			--	return support_list()
 		--	end
 		end
-		
+
 		if matches[1] == 'list' and matches[2] == 'groups' then
 			if msg.to.type == 'chat' or msg.to.type == 'channel' then
 				groups_list(msg)
