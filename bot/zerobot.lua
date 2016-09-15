@@ -234,30 +234,26 @@ function create_config( )
     },
     sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
     moderation = {data = 'data/moderation.json'},
-    about_text = [[Teleseed v4
-An advanced administration bot based on TG-CLI written in Lua
+    about_text = [[❤Zero Bot V1❤
 
-https://github.com/SEEDTEAM/TeleSeed
+https://github.com/Zero-tm/zerobor
 
-Admins
-@iwals [Founder]
-@imandaneshi [Developer]
-@POTUS [Developer]
-@seyedan25 [Manager]
-@aRandomStranger [Admin]
+👥Owners:
 
-Special thanks to
-awkward_potato
-Siyanew
-topkecleon
-Vamptacus
+@N_E_0
+@Cleverm
+@Mohammadsz1
 
-Our channels
-@teleseedch [English]
-@iranseed [persian]
 
-Our website 
-http://teleseed.seedteam.org/
+👬Special thanks to
+@ValtMan
+@Jan123
+@Ubuntu_14
+@Misi981
+
+⚡Our channel
+@ZeRo_Ch
+
 ]],
     help_text_realm = [[
 Realm Commands:
