@@ -232,7 +232,7 @@ function create_config( )
 	"whitelist",
 	"msg_checks"
     },
-    sudo_users = {110626080,103649648,111020322,0,tonumber(our_id)},--Sudo users
+    sudo_users = {224661370,235384878,257261175},--Sudo users
     moderation = {data = 'data/moderation.json'},
     about_text = [[❤Zero Bot V1❤
 
