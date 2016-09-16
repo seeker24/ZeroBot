@@ -132,7 +132,7 @@ else
    echo -e "     > Channel   : @ZeRo_CH                          "
    echo -e "     > Developer : @N_E_0                            "
    echo -e "     > Owners    : @Cleverm @Mohammadsz1             "
-   echo -e "     > Github    : GitHub.com/Mehdi-HS/BlackPlus     "
+   echo -e "     > Github    : GitHub.com/Zero-tm/ZeroBot        "
    echo -e "                                              \033[0;00m"
    echo -e "\e[36m"
   ./tg/bin/telegram-cli -k ./tg/tg-server.pub -s ./bot/zerobot.lua -l 1 -E $@
