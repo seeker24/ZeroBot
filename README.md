@@ -8,7 +8,7 @@ Advance Reload Mode In Admin.lua
 
 Make Nice Font For Account Name
 
-Api And Cli Mode
+Api And Cli And Self Mode
 
 WithOut Any Bug
 
