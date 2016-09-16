@@ -33,7 +33,7 @@ Anti Anti Anti spam (😐😅)
 Autolaunch For Free Servers And normal Server
 
 
-<h3>#in the future:</h3>
+<h3>in the future:</h3>
 
 People Mood
 
