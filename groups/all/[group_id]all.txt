@@ -1,1 +1,1 @@
-[group_id] logs !
+<b>[group_id] logs ! </b>
