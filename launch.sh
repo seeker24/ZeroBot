@@ -126,7 +126,7 @@ else
     exit 1
   fi
   
-  chmod 777 blackplus.sh
+  chmod 777 zero.sh
   
    echo -e "\033[38;5;208m"
    echo -e "     > Channel   : @ZeRo_CH                          "
